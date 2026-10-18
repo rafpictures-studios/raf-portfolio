@@ -176,6 +176,11 @@ sup { font-size: 0.6em; margin-left: 2px; vertical-align: 0.7em; line-height: 0;
 .nav-links:hover a { opacity: .55; }
 .nav-links a:hover { opacity: 1; }
 .nav-end { display: flex; justify-content: flex-end; align-items: center; gap: 24px; }
+/* way back to the RAF Pictures bio link */
+.nav-bio { color: var(--on-dark-2); transition: color .2s; }
+.nav-bio:hover { color: var(--on-dark); }
+.nav-bio .ph { transition: transform .35s var(--ease); }
+.nav-bio:hover .ph-arrow-left { transform: translateX(-4px); }
 
 .lang { display: inline-flex; gap: 2px; font-size: 13px; }
 .lang button {
@@ -202,11 +207,12 @@ sup { font-size: 0.6em; margin-left: 2px; vertical-align: 0.7em; line-height: 0;
 .mobile-menu .wrap { display: grid; gap: 4px; padding-top: 24px; }
 .mobile-menu a { font-size: 40px; letter-spacing: -0.03em; line-height: 1.25; }
 .mobile-menu .link-arrow { margin-top: 28px; font-size: 18px; }
+.mobile-menu .mobile-bio { margin-top: 14px; color: var(--on-dark-2); }
 .nav.is-open .mobile-menu { opacity: 1; visibility: visible; }
 
 @media (max-width: 899px) {
   .nav-inner { grid-template-columns: 1fr auto; }
-  .nav-links, .nav-cta { display: none; }
+  .nav-links, .nav-cta, .nav-bio { display: none; }
   .menu-btn { display: inline-flex; }
   .nav-end { gap: 16px; }
 }
@@ -226,6 +232,7 @@ sup { font-size: 0.6em; margin-left: 2px; vertical-align: 0.7em; line-height: 0;
   animation: marquee var(--marquee-dur, 90s) linear infinite;
 }
 .marquee:hover .marquee-track, .marquee:focus-within .marquee-track { animation-play-state: paused; }
+.marquee-track noscript { display: contents; }
 .marquee-item {
   flex: none; width: clamp(240px, 24vw, 360px); aspect-ratio: 16 / 9;
   overflow: hidden; background: var(--ink-2);

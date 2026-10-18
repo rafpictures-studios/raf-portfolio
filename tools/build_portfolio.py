@@ -21,8 +21,9 @@ WA = "https://api.whatsapp.com/send?phone=6289513170863"
 IG = "https://www.instagram.com/rizqyalfajri"
 YT = "https://youtube.com/@rafpictures_studios"
 MAIL = "mailto:alfajririzqi@gmail.com"
+BIO = "https://raf-bio-link.vercel.app"  # the RAF Pictures bio link
 COURSE = "https://academy.devatastudio.com/kursus/procedural-environment"
-VER = "2"
+VER = "3"
 
 e = html.escape
 
@@ -143,6 +144,7 @@ def head(title, desc, image):
         {nav_links()}
       </nav>
       <div class="nav-end">
+        <a class="link-arrow nav-bio" href="{BIO}"><i class="ph ph-arrow-left" aria-hidden="true"></i><span>Bio link</span></a>
         <button type="button" class="link-arrow nav-cta" data-open="commissionModal">{L({"en": "Get in touch", "id": "Hubungi saya"})}<i class="ph ph-arrow-right" aria-hidden="true"></i></button>
         <button type="button" class="menu-btn" id="v2MenuBtn" aria-expanded="false" aria-controls="v2Menu">Menu<span class="menu-icon" aria-hidden="true"></span></button>
       </div>
@@ -151,6 +153,7 @@ def head(title, desc, image):
       <div class="wrap">
         {nav_links()}
         <button type="button" class="link-arrow" data-open="commissionModal">{L({"en": "Get in touch", "id": "Hubungi saya"})}<i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+        <a class="link-arrow mobile-bio" href="{BIO}"><i class="ph ph-arrow-left" aria-hidden="true"></i><span>Back to bio link</span></a>
       </div>
     </div>
   </header>
@@ -164,7 +167,7 @@ def footer():
       <div class="footer-top">
         <nav class="footer-links" aria-label="Footer">
           {nav_links()}
-          <a href="/">{L({"en": "Bio link", "id": "Bio link"})}</a>
+          <a href="{BIO}">Bio link</a>
         </nav>
         <ul class="socials">
           <li><a href="{IG}" target="_blank" rel="noopener noreferrer">Instagram</a></li>
@@ -266,7 +269,22 @@ def ptitle(p):
 
 
 def home():
+    # Every wide still outside Kancil goes into a pool; portfolio.js picks a fresh,
+    # mixed set from it on each visit. The fixed MARQUEE list is the no-JS fallback.
+    pool = []
+    for p in PROJECTS:
+        if p["slug"] == "kancil":
+            continue
+        for st in p["sets"]:
+            for _, name in st["images"]:
+                w, h = SIZES.get((p["slug"], name), (16, 9))
+                if 1.3 <= w / h <= 2.6:
+                    pool.append((p["slug"], name))
     marquee = "\n".join(
+        f'<a class="marquee-item" href="v2/work/{slug}.html" data-p="{slug}">{picture(slug, name, "", "480px", lazy=True)}</a>'
+        for slug, name in pool
+    )
+    fallback = "\n".join(
         f'<a class="marquee-item" href="v2/work/{slug}.html">{picture(slug, name, "", "480px", lazy=i > 3)}</a>'
         for i, (slug, name) in enumerate(MARQUEE)
     )
@@ -310,9 +328,12 @@ def home():
         <h1 class="display reveal-words">{L({"en": "Building 3D worlds for animated film and series", "id": "Membangun dunia 3D untuk film dan serial animasi"}, cls="words")}</h1>
       </div>
       <div class="marquee" aria-label="Selected stills">
-        <div class="marquee-track">
+        <div class="marquee-track"><noscript>
+          {fallback}
+        </noscript></div>
+        <template id="marqueePool">
           {marquee}
-        </div>
+        </template>
       </div>
       <div class="wrap hero-foot reveal">
         <p class="lead">{L({"en": "Rizki Alfajri, Lead Asset Artist at Visinema Studios. Environments and props for Jumbo, BoBoiBoy, Kancil and Nussa.", "id": "Rizki Alfajri, Lead Asset Artist di Visinema Studios. Environment dan props untuk Jumbo, BoBoiBoy, Kancil, dan Nussa."})}</p>
@@ -396,6 +417,7 @@ def home():
           <div class="actions">
             <button type="button" class="btn" data-open="commissionModal">{L({"en": "Get in touch", "id": "Hubungi saya"})}<i class="ph ph-arrow-right" aria-hidden="true"></i></button>
             <a class="link-arrow" href="{WA}" target="_blank" rel="noopener noreferrer"><span>WhatsApp</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+            <a class="link-arrow" href="{BIO}"><i class="ph ph-arrow-left" aria-hidden="true"></i><span>Back to bio link</span></a>
           </div>
         </div>
       </div>

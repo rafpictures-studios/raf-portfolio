@@ -12,7 +12,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="assets/icons/web-icon.png">
   <link rel="stylesheet" href="css/icons.css">
-  <link rel="stylesheet" href="css/portfolio.css?v=2">
+  <link rel="stylesheet" href="css/portfolio.css?v=3">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -26,6 +26,7 @@
 <a href="index.html#contact">Contact</a>
       </nav>
       <div class="nav-end">
+        <a class="link-arrow nav-bio" href="https://raf-bio-link.vercel.app"><i class="ph ph-arrow-left" aria-hidden="true"></i><span>Bio link</span></a>
         <button type="button" class="link-arrow nav-cta" data-open="commissionModal">Get in touch<i class="ph ph-arrow-right" aria-hidden="true"></i></button>
         <button type="button" class="menu-btn" id="v2MenuBtn" aria-expanded="false" aria-controls="v2Menu">Menu<span class="menu-icon" aria-hidden="true"></span></button>
       </div>
@@ -37,6 +38,7 @@
 <a href="index.html#experience">Experience</a>
 <a href="index.html#contact">Contact</a>
         <button type="button" class="link-arrow" data-open="commissionModal">Get in touch<i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+        <a class="link-arrow mobile-bio" href="https://raf-bio-link.vercel.app"><i class="ph ph-arrow-left" aria-hidden="true"></i><span>Back to bio link</span></a>
       </div>
     </div>
   </header>
@@ -48,7 +50,7 @@
         <h1 class="display reveal-words"><span class="words">Building 3D worlds for animated film and series</span></h1>
       </div>
       <div class="marquee" aria-label="Selected stills">
-        <div class="marquee-track">
+        <div class="marquee-track"><noscript>
           <a class="marquee-item" href="work/jumbo.html"><img src="assets/portfolio/jumbo/don-room-1-800.webp" srcset="assets/portfolio/jumbo/don-room-1-800.webp 800w, assets/portfolio/jumbo/don-room-1-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" fetchpriority="high"></a>
 <a class="marquee-item" href="work/boboiboy-galaxy-baraju.html"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-2-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-2-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-2-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" fetchpriority="high"></a>
 <a class="marquee-item" href="work/jumbo.html"><img src="assets/portfolio/jumbo/warehouse-ext-2-800.webp" srcset="assets/portfolio/jumbo/warehouse-ext-2-800.webp 800w, assets/portfolio/jumbo/warehouse-ext-2-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" fetchpriority="high"></a>
@@ -59,7 +61,73 @@
 <a class="marquee-item" href="work/jumbo.html"><img src="assets/portfolio/jumbo/titin-1-800.webp" srcset="assets/portfolio/jumbo/titin-1-800.webp 800w, assets/portfolio/jumbo/titin-1-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
 <a class="marquee-item" href="work/boboiboy-galaxy-baraju.html"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-base-3-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-base-3-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-base-3-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
 <a class="marquee-item" href="work/jumbo.html"><img src="assets/portfolio/jumbo/oma-kitchen-1-800.webp" srcset="assets/portfolio/jumbo/oma-kitchen-1-800.webp 800w, assets/portfolio/jumbo/oma-kitchen-1-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
-        </div>
+        </noscript></div>
+        <template id="marqueePool">
+          <a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/oma-living-1-800.webp" srcset="assets/portfolio/jumbo/oma-living-1-800.webp 800w, assets/portfolio/jumbo/oma-living-1-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/oma-living-2-800.webp" srcset="assets/portfolio/jumbo/oma-living-2-800.webp 800w, assets/portfolio/jumbo/oma-living-2-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/oma-living-3-800.webp" srcset="assets/portfolio/jumbo/oma-living-3-800.webp 800w, assets/portfolio/jumbo/oma-living-3-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/oma-living-4-800.webp" srcset="assets/portfolio/jumbo/oma-living-4-800.webp 800w, assets/portfolio/jumbo/oma-living-4-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/oma-kitchen-1-800.webp" srcset="assets/portfolio/jumbo/oma-kitchen-1-800.webp 800w, assets/portfolio/jumbo/oma-kitchen-1-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/oma-kitchen-2-800.webp" srcset="assets/portfolio/jumbo/oma-kitchen-2-800.webp 800w, assets/portfolio/jumbo/oma-kitchen-2-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/oma-kitchen-3-800.webp" srcset="assets/portfolio/jumbo/oma-kitchen-3-800.webp 800w, assets/portfolio/jumbo/oma-kitchen-3-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/oma-kitchen-4-800.webp" srcset="assets/portfolio/jumbo/oma-kitchen-4-800.webp 800w, assets/portfolio/jumbo/oma-kitchen-4-1600.webp 1600w" sizes="480px" width="1024" height="434" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/don-room-1-800.webp" srcset="assets/portfolio/jumbo/don-room-1-800.webp 800w, assets/portfolio/jumbo/don-room-1-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/don-room-2-800.webp" srcset="assets/portfolio/jumbo/don-room-2-800.webp 800w, assets/portfolio/jumbo/don-room-2-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/don-room-3-800.webp" srcset="assets/portfolio/jumbo/don-room-3-800.webp 800w, assets/portfolio/jumbo/don-room-3-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/don-room-4-800.webp" srcset="assets/portfolio/jumbo/don-room-4-800.webp 800w, assets/portfolio/jumbo/don-room-4-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/warehouse-int-1-800.webp" srcset="assets/portfolio/jumbo/warehouse-int-1-800.webp 800w, assets/portfolio/jumbo/warehouse-int-1-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/warehouse-int-2-800.webp" srcset="assets/portfolio/jumbo/warehouse-int-2-800.webp 800w, assets/portfolio/jumbo/warehouse-int-2-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/warehouse-int-3-800.webp" srcset="assets/portfolio/jumbo/warehouse-int-3-800.webp 800w, assets/portfolio/jumbo/warehouse-int-3-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/warehouse-int-4-800.webp" srcset="assets/portfolio/jumbo/warehouse-int-4-800.webp 800w, assets/portfolio/jumbo/warehouse-int-4-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/warehouse-ext-1-800.webp" srcset="assets/portfolio/jumbo/warehouse-ext-1-800.webp 800w, assets/portfolio/jumbo/warehouse-ext-1-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/warehouse-ext-2-800.webp" srcset="assets/portfolio/jumbo/warehouse-ext-2-800.webp 800w, assets/portfolio/jumbo/warehouse-ext-2-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/warehouse-ext-3-800.webp" srcset="assets/portfolio/jumbo/warehouse-ext-3-800.webp 800w, assets/portfolio/jumbo/warehouse-ext-3-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/warehouse-ext-4-800.webp" srcset="assets/portfolio/jumbo/warehouse-ext-4-800.webp 800w, assets/portfolio/jumbo/warehouse-ext-4-1600.webp 1600w" sizes="480px" width="1195" height="506" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/titin-1-800.webp" srcset="assets/portfolio/jumbo/titin-1-800.webp 800w, assets/portfolio/jumbo/titin-1-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/titin-2-800.webp" srcset="assets/portfolio/jumbo/titin-2-800.webp 800w, assets/portfolio/jumbo/titin-2-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/titin-3-800.webp" srcset="assets/portfolio/jumbo/titin-3-800.webp 800w, assets/portfolio/jumbo/titin-3-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/titin-4-800.webp" srcset="assets/portfolio/jumbo/titin-4-800.webp 800w, assets/portfolio/jumbo/titin-4-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/ruko-1-800.webp" srcset="assets/portfolio/jumbo/ruko-1-800.webp 800w, assets/portfolio/jumbo/ruko-1-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/ruko-2-800.webp" srcset="assets/portfolio/jumbo/ruko-2-800.webp 800w, assets/portfolio/jumbo/ruko-2-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/ruko-3-800.webp" srcset="assets/portfolio/jumbo/ruko-3-800.webp 800w, assets/portfolio/jumbo/ruko-3-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/ruko-4-800.webp" srcset="assets/portfolio/jumbo/ruko-4-800.webp 800w, assets/portfolio/jumbo/ruko-4-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/cemetery-1-800.webp" srcset="assets/portfolio/jumbo/cemetery-1-800.webp 800w, assets/portfolio/jumbo/cemetery-1-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/cemetery-2-800.webp" srcset="assets/portfolio/jumbo/cemetery-2-800.webp 800w, assets/portfolio/jumbo/cemetery-2-1600.webp 1600w" sizes="480px" width="1186" height="508" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/cemetery-3-800.webp" srcset="assets/portfolio/jumbo/cemetery-3-800.webp 800w, assets/portfolio/jumbo/cemetery-3-1600.webp 1600w" sizes="480px" width="1024" height="434" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/jumbo.html" data-p="jumbo"><img src="assets/portfolio/jumbo/cemetery-4-800.webp" srcset="assets/portfolio/jumbo/cemetery-4-800.webp 800w, assets/portfolio/jumbo/cemetery-4-1600.webp 1600w" sizes="480px" width="1229" height="521" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/jail-1-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/jail-1-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/jail-1-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/jail-2-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/jail-2-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/jail-2-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/jail-3-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/jail-3-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/jail-3-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/jail-4-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/jail-4-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/jail-4-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/jail-still-1-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/jail-still-1-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/jail-still-1-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/jail-still-2-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/jail-still-2-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/jail-still-2-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/jail-still-3-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/jail-still-3-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/jail-still-3-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/jail-still-4-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/jail-still-4-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/jail-still-4-1600.webp 1600w" sizes="480px" width="1344" height="756" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-base-1-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-base-1-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-base-1-1600.webp 1600w" sizes="480px" width="1344" height="756" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-base-2-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-base-2-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-base-2-1600.webp 1600w" sizes="480px" width="1344" height="756" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-base-3-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-base-3-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-base-3-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-base-4-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-base-4-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-base-4-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-damage-1-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-damage-1-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-damage-1-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-damage-2-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-damage-2-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-damage-2-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-damage-3-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-damage-3-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-damage-3-1600.webp 1600w" sizes="480px" width="1344" height="756" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-damage-4-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-damage-4-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-damage-4-1600.webp 1600w" sizes="480px" width="1344" height="756" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-1-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-1-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-1-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-2-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-2-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-2-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-3-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-3-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-3-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-4-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-4-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-4-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-5-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-5-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-5-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-6-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-6-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-6-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-7-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-7-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-7-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/boboiboy-galaxy-baraju.html" data-p="boboiboy-galaxy-baraju"><img src="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-8-800.webp" srcset="assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-8-800.webp 800w, assets/portfolio/boboiboy-galaxy-baraju/cockpit-still-8-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/nussa.html" data-p="nussa"><img src="assets/portfolio/nussa/mooi-1-800.webp" srcset="assets/portfolio/nussa/mooi-1-800.webp 800w, assets/portfolio/nussa/mooi-1-1600.webp 1600w" sizes="480px" width="1280" height="720" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/nussa.html" data-p="nussa"><img src="assets/portfolio/nussa/mooi-2-800.webp" srcset="assets/portfolio/nussa/mooi-2-800.webp 800w, assets/portfolio/nussa/mooi-2-1600.webp 1600w" sizes="480px" width="1280" height="720" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/nussa.html" data-p="nussa"><img src="assets/portfolio/nussa/mooi-3-800.webp" srcset="assets/portfolio/nussa/mooi-3-800.webp 800w, assets/portfolio/nussa/mooi-3-1600.webp 1600w" sizes="480px" width="1280" height="720" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/personal-work.html" data-p="personal-work"><img src="assets/portfolio/personal-work/avatar-1-800.webp" srcset="assets/portfolio/personal-work/avatar-1-800.webp 800w, assets/portfolio/personal-work/avatar-1-1600.webp 1600w" sizes="480px" width="1600" height="695" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/personal-work.html" data-p="personal-work"><img src="assets/portfolio/personal-work/avatar-2-800.webp" srcset="assets/portfolio/personal-work/avatar-2-800.webp 800w, assets/portfolio/personal-work/avatar-2-1600.webp 1600w" sizes="480px" width="1434" height="601" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/personal-work.html" data-p="personal-work"><img src="assets/portfolio/personal-work/avatar-3-800.webp" srcset="assets/portfolio/personal-work/avatar-3-800.webp 800w, assets/portfolio/personal-work/avatar-3-1600.webp 1600w" sizes="480px" width="1344" height="605" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/personal-work.html" data-p="personal-work"><img src="assets/portfolio/personal-work/maya-1-800.webp" srcset="assets/portfolio/personal-work/maya-1-800.webp 800w, assets/portfolio/personal-work/maya-1-1600.webp 1600w" sizes="480px" width="1536" height="864" alt="" loading="lazy" decoding="async"></a>
+<a class="marquee-item" href="work/personal-work.html" data-p="personal-work"><img src="assets/portfolio/personal-work/maya-2-800.webp" srcset="assets/portfolio/personal-work/maya-2-800.webp 800w, assets/portfolio/personal-work/maya-2-1600.webp 1600w" sizes="480px" width="1152" height="648" alt="" loading="lazy" decoding="async"></a>
+        </template>
       </div>
       <div class="wrap hero-foot reveal">
         <p class="lead">Rizki Alfajri, Lead Asset Artist at Visinema Studios. Environments and props for Jumbo, BoBoiBoy, Kancil and Nussa.</p>
@@ -80,7 +148,7 @@
         </div>
         <hr class="rule">
         <div class="about-grid">
-          <figure class="about-media reveal"><img src="assets/portfolio/about/portrait-800.webp" width="922" height="1383" alt="Portrait of Rizki Alfajri" loading="lazy"></figure>
+          <figure class="about-media reveal"><img src="assets/portfolio/about/portrait-800.webp" width="1024" height="1536" alt="Portrait of Rizki Alfajri" loading="lazy"></figure>
           <ul class="about-points reveal">
             <li>Sets, layout and set dressing</li>
             <li>Props and production assets</li>
@@ -224,6 +292,7 @@
           <div class="actions">
             <button type="button" class="btn" data-open="commissionModal">Get in touch<i class="ph ph-arrow-right" aria-hidden="true"></i></button>
             <a class="link-arrow" href="https://api.whatsapp.com/send?phone=6289513170863" target="_blank" rel="noopener noreferrer"><span>WhatsApp</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+            <a class="link-arrow" href="https://raf-bio-link.vercel.app"><i class="ph ph-arrow-left" aria-hidden="true"></i><span>Back to bio link</span></a>
           </div>
         </div>
       </div>
@@ -238,6 +307,7 @@
 <a href="index.html#about">About</a>
 <a href="index.html#experience">Experience</a>
 <a href="index.html#contact">Contact</a>
+          <a href="https://raf-bio-link.vercel.app">Bio link</a>
         </nav>
         <ul class="socials">
           <li><a href="https://www.instagram.com/rizqyalfajri" target="_blank" rel="noopener noreferrer">Instagram</a></li>
@@ -317,6 +387,6 @@
   <script src="js/config.js?v=4"></script>
   <script>CONFIG.TRANSLATIONS.id = CONFIG.TRANSLATIONS.en;</script>
   <script src="js/app.js?v=4"></script>
-  <script src="js/portfolio.js?v=2"></script>
+  <script src="js/portfolio.js?v=3"></script>
 </body>
 </html>

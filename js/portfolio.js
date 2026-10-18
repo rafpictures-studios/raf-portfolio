@@ -10,8 +10,39 @@
   const q = (s, r = document) => r.querySelector(s);
   const qa = (s, r = document) => Array.from(r.querySelectorAll(s));
 
-  /* Marquee: duplicate the items once so the loop is seamless */
+  /* Marquee: a fresh mix of stills on every visit. Each project's stills are
+     shuffled, then the projects take turns, so the strip never shows the same
+     film twice in a row. */
   const track = q('.marquee-track');
+  const pool = q('#marqueePool');
+  const MARQUEE_COUNT = 10;
+  const shuffle = (a) => {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  };
+  if (track && pool) {
+    const groups = {};
+    Array.from(pool.content.children).forEach((el) => {
+      (groups[el.dataset.p] = groups[el.dataset.p] || []).push(el);
+    });
+    // a project with only a few stills shows at most half of them, so it does not repeat every visit
+    const lists = shuffle(Object.values(groups).map((g) => shuffle(g).slice(0, Math.min(4, Math.ceil(g.length / 2)))));
+    const picked = [];
+    for (let round = 0; picked.length < MARQUEE_COUNT && lists.some((l) => l.length); round++) {
+      lists.forEach((l) => { if (l.length && picked.length < MARQUEE_COUNT) picked.push(l.shift()); });
+    }
+    track.replaceChildren(...picked.map((el, i) => {
+      const node = document.importNode(el, true);
+      const img = q('img', node);
+      if (i < 4) { img.loading = 'eager'; img.fetchPriority = 'high'; }
+      return node;
+    }));
+  }
+
+  /* Duplicate the items once so the loop is seamless */
   if (track) {
     qa('.marquee-item', track).forEach((item) => {
       const clone = item.cloneNode(true);
