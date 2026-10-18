@@ -1,0 +1,30 @@
+/* Phosphor Icons 2.1.1 (MIT), subset to the glyphs this site uses.
+   To add an icon: put its class in the HTML, then re-run the subset step (see README). */
+@font-face { font-family: "Phosphor"; src: url("../assets/fonts/phosphor.woff2") format("woff2"); font-weight: normal; font-style: normal; font-display: block; }
+.ph { font-family: "Phosphor" !important; speak: never; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: inline-block; }
+.ph.ph-arrow-left:before { content: "\e058"; }
+.ph.ph-arrow-right:before { content: "\e06c"; }
+.ph.ph-arrow-up-right:before { content: "\e092"; }
+.ph.ph-bell:before { content: "\e0ce"; }
+.ph.ph-calculator:before { content: "\e538"; }
+.ph.ph-check:before { content: "\e182"; }
+.ph.ph-copy:before { content: "\e1ca"; }
+.ph.ph-cpu:before { content: "\e610"; }
+.ph.ph-download-simple:before { content: "\e20c"; }
+.ph.ph-envelope-simple:before { content: "\e218"; }
+.ph.ph-instagram-logo:before { content: "\e2d0"; }
+.ph.ph-link-simple:before { content: "\e2e6"; }
+.ph.ph-list:before { content: "\e2f0"; }
+.ph.ph-moon:before { content: "\e330"; }
+.ph.ph-package:before { content: "\e390"; }
+.ph.ph-paint-brush-broad:before { content: "\e590"; }
+.ph.ph-paper-plane-tilt:before { content: "\e398"; }
+.ph.ph-play:before { content: "\e3d0"; }
+.ph.ph-sun:before { content: "\e472"; }
+.ph.ph-tag:before { content: "\e478"; }
+.ph.ph-whatsapp-logo:before { content: "\e5d0"; }
+.ph.ph-x:before { content: "\e4f6"; }
+.ph.ph-youtube-logo:before { content: "\e4fc"; }
+@font-face { font-family: "Phosphor-Fill"; src: url("../assets/fonts/phosphor-fill.woff2") format("woff2"); font-weight: normal; font-style: normal; font-display: block; }
+.ph-fill { font-family: "Phosphor-Fill" !important; speak: never; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: inline-block; }
+.ph-fill.ph-play:before { content: "\e3d0"; }
