@@ -94,6 +94,9 @@ PROJECTS = [
     },
     {
         "slug": "kancil",
+        # not released yet: the page shows the project info and poster only,
+        # the sets stay in the data but are not rendered
+        "private": True,
         "title": "Kancil",
         "type": {"en": "Movie teaser, R&D", "id": "Teaser film, R&D"},
         "role": {"en": "R&D and 3D asset creation", "id": "R&D dan pembuatan aset 3D"},

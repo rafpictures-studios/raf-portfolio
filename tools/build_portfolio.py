@@ -23,7 +23,7 @@ YT = "https://youtube.com/@rafpictures_studios"
 MAIL = "mailto:alfajririzqi@gmail.com"
 BIO = "https://raf-bio-link.vercel.app"  # the RAF Pictures bio link
 COURSE = "https://academy.devatastudio.com/kursus/procedural-environment"
-VER = "3"
+VER = "4"
 
 e = html.escape
 
@@ -295,7 +295,7 @@ def home():
           <a class="work reveal{' work--poster' if card_poster(p) else ' work--wide'}" href="v2/work/{p['slug']}.html">
             <span class="work-media">{picture(p['slug'], (p['poster'] if card_poster(p) else p['cover'])[1], en(p['title']), "(min-width: 1000px) 25vw, 50vw" if card_poster(p) else "100vw")}<span class="work-go"><i class="ph ph-arrow-up-right" aria-hidden="true"></i></span></span>
             <span class="work-row"><span class="work-title">{L(p['title'])}</span><span class="work-num">{num}</span></span>
-            <span class="work-meta">{L(p['type'])}, {e(p['years'])}</span>
+            <span class="work-meta">{L(p['type'])}, {e(p['years'])}{'<span class="badge">Unreleased</span>' if p.get('private') else ''}</span>
           </a>""")
     exp = []
     for i, x in enumerate(EXPERIENCE):
@@ -484,7 +484,8 @@ def project_page(i):
     poster = ""
     if p.get("poster"):
         poster = f'<figure class="poster reveal">{picture(p["slug"], p["poster"][1], t + " poster", "(min-width: 900px) 30vw, 60vw", lazy=False)}</figure>'
-    sets = "".join(set_block(p, s, k + 1) for k, s in enumerate(p["sets"]))
+    private = p.get("private")
+    sets = "" if private else "".join(set_block(p, s, k + 1) for k, s in enumerate(p["sets"]))
     upcoming = ""
     feat = p.get("feature")
     if p.get("upcoming"):
@@ -515,10 +516,20 @@ def project_page(i):
           </div>
         </article>"""
     count = sum(len(s["images"]) for s in p["sets"])
+    hint = f'<p class="gallery-hint reveal">{count} {L({"en": "images. Tap any image to view it full size.", "id": "gambar. Ketuk gambar untuk melihat ukuran penuh."})}</p>'
+    if private:
+        hint = """
+        <article class="private-note reveal">
+          <span class="upcoming-tag">Unreleased</span>
+          <h2 class="set-title">Under wraps until release</h2>
+          <p>This film has not been released yet, so the sets and props I built for it stay private for now. The full breakdown goes up here after the premiere.</p>
+          <button type="button" class="link-arrow" data-open="commissionModal"><span>Ask for a private viewing</span><i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+        </article>"""
+    share = p["poster"] if private else p["cover"]
     return head(
         f"{t} | Rizki Alfajri portfolio",
         p["summary"]["en"][:155],
-        img_path(p["slug"], p["cover"][1], 1600),
+        img_path(p["slug"], share[1], 1600),
     ) + f"""
   <main id="main">
     <section class="sec sec--dark project-hero">
@@ -526,7 +537,7 @@ def project_page(i):
         <a class="back link-arrow" href="v2/#work"><i class="ph ph-arrow-left" aria-hidden="true"></i>{L({"en": "All work", "id": "Semua karya"})}</a>
         <div class="project-intro{' project-intro--poster' if poster else ''}">
           <div>
-            <p class="eyebrow">{e(f"{i + 1:02d}")} / {e(f"{len(PROJECTS):02d}")}</p>
+            <p class="eyebrow">{e(f"{i + 1:02d}")} / {e(f"{len(PROJECTS):02d}")}{'<span class="badge">Unreleased</span>' if private else ''}</p>
             <h1 class="display reveal-words">{L(p['title'], cls='words') if not isinstance(p['title'], str) else f'<span class="words">{e(t)}</span>'}</h1>
             <p class="lead project-summary reveal">{L(p['summary'])}</p>
             {videos_html}
@@ -540,7 +551,7 @@ def project_page(i):
     <section class="sec sec--dark project-body">
       <div class="wrap">
         {upcoming}
-        <p class="gallery-hint reveal">{count} {L({"en": "images. Tap any image to view it full size.", "id": "gambar. Ketuk gambar untuk melihat ukuran penuh."})}</p>
+        {hint}
         {sets}
       </div>
     </section>
@@ -553,7 +564,7 @@ def project_page(i):
             <span class="next-title">{L(nxt['title'])}</span>
             <i class="ph ph-arrow-right" aria-hidden="true"></i>
           </span>
-          <span class="next-media">{picture(nxt['slug'], nxt['cover'][1], '', '(min-width: 900px) 60vw, 100vw')}</span>
+          <span class="next-media{' next-media--poster' if nxt.get('private') else ''}">{picture(nxt['slug'], (nxt['poster'] if nxt.get('private') else nxt['cover'])[1], '', '(min-width: 900px) 60vw, 100vw')}</span>
         </a>
       </div>
     </section>
